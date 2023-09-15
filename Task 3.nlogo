@@ -1,8 +1,11 @@
+; Our choise for battle (team Bronytskyi-Vasylkiv-Kazymyr)
+; set_figure_1_glider_spawner [c n m]
+
+
 patches-own [ ;; definition of global var for patches only (patches are cells of grid)
   alive?
   future-color
 ]
-
 
 
 to setup4pantomino
@@ -131,7 +134,9 @@ end
 
 
 
-to set_figure_1_glider_spawner[c n m]
+
+; Our choise for battle (team Bronytskyi-Vasylkiv-Kazymyr)
+to set_figure_1_glider_spawner [c n m]
 
   ; row 0
   ask patch (n - 2) m [
@@ -483,15 +488,28 @@ to setup-fight
     set future-color pcolor
     set alive? false
   ]
-  set_figure_1_glider_spawner  green  85  85
 
+  ;set_figure_1_glider_spawner
+  ;set_figure_2_multix
+  ;set_figure_3_r_pentomino
+  ;set_figure_4_two_glider_mess
   ;set_figure_5_alien_ship_explosion
-  set_figure_5_alien_ship_explosion            black 85 -85
 
-  ;set_figure_3_r_pentomino red  -85 -85
-  set_figure_4_two_glider_mess   blue   -85 -85
 
-  set_figure_2_multix  red -85  85
+
+
+  ; Our choise for battle (team Bronytskyi-Vasylkiv-Kazymyr)
+  set_figure_1_glider_spawner  green   85  85
+
+
+  set_figure_2_multix          black   85 -85
+
+
+  set_figure_3_r_pentomino     blue   -85 -85
+
+
+  set_figure_4_two_glider_mess red    -85  85
+
 
   reset-ticks
 end
